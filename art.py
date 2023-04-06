@@ -13,7 +13,16 @@ LOGO = ("""
                                                                                                                                                                                                                            
 """)
 
+RULES = ("""
+######  #     # #       #######  #####  
+#     # #     # #       #       #     # 
+#     # #     # #       #       #       
+######  #     # #       #####    #####  
+#   #   #     # #       #             # 
+#    #  #     # #       #       #     # 
+#     #  #####  ####### #######  #####  
 
-
-
-    
+1. Two players make turns by placing "X" or "O" in an empty cell on the grid.
+2. The goal is to place "X" or "O" three times in an horizontal/vertical/diagonal row.
+3. The winner - is the first player who made a row.
+""")  
