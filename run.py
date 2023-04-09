@@ -1,7 +1,26 @@
 import art
 
+board = ["-", "-", "-",
+         "-", "-", "-",
+         "-", "-", "-"]
+
+def print_board(board):
+    """
+    Printing the board of the game
+    """ 
+    print("-"*13)
+    print("|", board[0], "|", board[1], "|", board[2], "|" )
+    print("-"*13) 
+    print("|", board[3], "|", board[4], "|", board[5], "|" )
+    print("-"*13) 
+    print("|", board[6], "|", board[7], "|", board[8], "|" ) 
+    print("-"*13)  
+       
+
 def start_game():
     print("Game is starting....")
+    print_board(board)
+    
 def rules():
     """
     Asks the user about reading the rules of the game. 
@@ -23,10 +42,5 @@ def rules():
             break
         else:
             print("\nThe wrong answer. Try again?\n")
-            continue
-            
+            continue   
 rules()
-  
-
-
-
