@@ -36,6 +36,7 @@ def user_input(board):
         if inp_num >= 1 and inp_num <= 9 and board[inp_num-1] == "-":
             board[inp_num-1] = player
             check_winner(board)
+            check_draw(board)
             switch_player()
         elif inp_num not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
             print("Error input. Enter the number 1-9: ")
@@ -90,6 +91,11 @@ def check_diag(board):
     elif board[2] == board[4] == board[6] and board[4] != "-":
         winner = board[2]
         return True
+
+def check_draw(board):
+     if "-" not in board:
+        print_board(board)
+        print(f"\nIt is a Draw!")       
 
 
 def check_winner(board):
