@@ -32,10 +32,9 @@ def user_input(board):
     - if the cell is already occupied
     """
     while True:
-        inp_num = int(input("Enter a number 1-9: "))
+        inp_num = int(input(f"\nEnter a number 1-9: "))
         if inp_num >= 1 and inp_num <= 9 and board[inp_num-1] == "-":
             board[inp_num-1] = player
-            print("checking winner...")
             check_winner(board)
             switch_player()
         elif inp_num not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
@@ -99,13 +98,13 @@ def check_winner(board):
     """
     if check_row(board):
         print_board(board)
-        print(f"The winner is {winner}!")
+        print(f"\nThe winner is {winner}!")
     elif check_col(board):
         print_board(board)
-        print(f"The winner is {winner}!")
+        print(f"\nThe winner is {winner}!")
     elif check_diag(board):
         print_board(board)
-        print(f"The winner is {winner}!")
+        print(f"\nThe winner is {winner}!")
 
 
 def switch_player():
@@ -114,11 +113,11 @@ def switch_player():
     """
     global player
     if player == "X":
-        print(player)
         player = "O"
-        print(player)
+        print(f"\nPlayer2 - your turn: \n")
     else:
         player = "X"
+        print(f"\nPlayer1 - your turn: \n")
 
 
 # start the game
