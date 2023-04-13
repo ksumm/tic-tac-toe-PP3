@@ -36,4 +36,6 @@ RULES = ("""
 3. The goal is to place "X" or "O" three times in an 
    horizontal/vertical/diagonal row.
 4. The winner is the first player who made a row.
+
+Let's start to play!
 """)  
