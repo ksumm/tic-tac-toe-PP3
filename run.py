@@ -39,7 +39,7 @@ def user_input(board):
     - if the cell is already occupied
     """
     while True:
-        inp_num = int(input(f"{Fore.MAGENTA}\nEnter a number 1-9: {Fore.RESET}"))
+        inp_num = int(input(f"{Fore.MAGENTA}\nEnter a number 1-9:\n {Fore.RESET}"))
         if inp_num >= 1 and inp_num <= 9 and board[inp_num-1] == "-":
             board[inp_num-1] = player
             break
@@ -145,7 +145,7 @@ def rules():
     while True:
         answer = input(
             Fore.YELLOW +
-            'Do you want to read the RULES? Please, input "y" for YES or "n" for NO: '
+            'Do you want to read the RULES? Please, input "y" for YES or "n" for NO:\n '
              + Fore.RESET)
         if answer.lower() == 'y':
             print(art.RULES)
