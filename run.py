@@ -1,6 +1,9 @@
-import art
+"""
+Import
+"""
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
+import art
 colorama.init()
 
 
@@ -8,22 +11,22 @@ colorama.init()
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
-player = "X"
-winner = None
-game_running = True
+player = "X" # pylint: disable=C0103
+winner = None # pylint: disable=C0103
+game_running = True # pylint: disable=C0103
 
 
 # print the game board
-def print_board(b):
+def print_board(g_board):
     """
     Print the board of the game.
     """
     print(Fore.YELLOW  + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW  + "|", b[0], "|", b[1], "|", b[2], "|" + Fore.RESET)
+    print(Fore.YELLOW  + "|", g_board[0], "|", g_board[1], "|", g_board[2], "|" + Fore.RESET)
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW + "|", b[3], "|", b[4], "|", b[5], "|"+ Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[3], "|", g_board[4], "|", g_board[5], "|"+ Fore.RESET)
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW + "|", b[6], "|", b[7], "|", b[8], "|"+ Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[6], "|", g_board[7], "|", g_board[8], "|"+ Fore.RESET)
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
 
 
@@ -94,7 +97,7 @@ def check_diagonal(board):
     elif board[2] == board[4] == board[6] and board[4] != "-":
         winner = board[2]
         return True
-        
+
 
 def check_draw(board):
     """
@@ -103,8 +106,8 @@ def check_draw(board):
     global game_running
     if "-" not in board:
         print_board(board)
-        print(f"\nIt is a Draw!")
-        game_running = False      
+        print("\nIt is a Draw!")
+        game_running = False
 
 
 def check_winner(board):
@@ -115,7 +118,7 @@ def check_winner(board):
     if check_row(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
-        game_running = False 
+        game_running = False
 
     elif check_column(board):
         print_board(board)
@@ -125,7 +128,7 @@ def check_winner(board):
     elif check_diagonal(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
-        game_running = False 
+        game_running = False
 
 
 def rules():
@@ -141,7 +144,9 @@ def rules():
     print(Fore.YELLOW + "Welcome to the TIC TAC TOE game!\n" + Fore.RESET)
     while True:
         answer = input(
-            Fore.YELLOW + 'Do you want to read the RULES? Please, input "y" for YES or "n" for NO: ' + Fore.RESET)
+            Fore.YELLOW +
+            'Do you want to read the RULES? Please, input "y" for YES or "n" for NO: '
+             + Fore.RESET)
         if answer.lower() == 'y':
             print(art.RULES)
             break
@@ -168,7 +173,7 @@ def switch_player():
 
     else:
         player = "X"
-        
+
 
 
 # start the game
@@ -178,4 +183,3 @@ while game_running:
     check_winner(board)
     check_draw(board)
     switch_player()
-
