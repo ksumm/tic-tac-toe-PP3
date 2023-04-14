@@ -1,7 +1,10 @@
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 """
 ASCII Game Logo Art
 """
-LOGO = ("""                                                                                                             
+LOGO = (Fore.MAGENTA + """                                                                                                             
  ********** **   ******        **********     **       ******        **********   *******   ********            
 /////**/// /**  **////**      /////**///     ****     **////**      /////**///   **/////** /**/////             
     /**    /** **    //           /**       **//**   **    //           /**     **     //**/**                  
@@ -11,9 +14,9 @@ LOGO = ("""
     /**    /** //******           /**    /**     /** //******           /**     //*******  /********            
     //     //   //////            //     //      //   //////            //       ///////   ////////             
                                                                                                                                                                                                                            
-""")
+""" + Fore.RESET)
 
-RULES = ("""
+RULES = (Fore.MAGENTA + """
 ######  #     # #       #######  #####  
 #     # #     # #       #       #     # 
 #     # #     # #       #       #       
@@ -38,4 +41,4 @@ RULES = ("""
 4. The winner is the first player who made a row.
 
 Let's start to play!
-""")  
+""" + Fore.RESET)  
