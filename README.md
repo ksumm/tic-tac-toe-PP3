@@ -53,7 +53,45 @@ The colours of the game were supplied by the [Colorama](https://pypi.org/project
  
 ## Logic
 
-The flow chart was created using 
+The flow chart was created using [Lucid](https://lucid.co/).
+
+## Features
+
+### Logo
+
+The Tic Tac Toe logo in magenta color is shown when the user run the game. It is created using the ASCII art.
+
+### Rules
+
+After starting the game the user is asked if he wants to read the rules. Rules section is printed in magenta colour and has a logo created using the ASCII art.
+
+### Game board
+
+The game has simple 3*3 cells board in bright yellow colour, that gives to the user a positive impression. 
+
+### Warning messages
+
+The warning messages are shown when there was an invalid input.
+
+### Winner message
+
+The winner message is shown after the game is finished.
+
+
+### Future implements
+
+- Take the names of the players
+- Score counter
+
+
+
+
+
+### Technologies used
+
+ - [Patorjk.com](https://patorjk.com/software/taag/#p=testall&f=3-D&t=TIC%20TAC%20TOE) was used to convert text to ASCII Art to create LOGO and RULES
+
+
 
 
 ## Credits
