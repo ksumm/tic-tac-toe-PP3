@@ -17,12 +17,11 @@ Tic Tac Toe is a traditional game for 2 players. It teaches strategy skills, dev
 
 * [Technologies Used](#technologies-used)
   * [Languages Used](#languages-used)
-  * [Python Modules](#python-modules)
-  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+  * [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
 
 * [Testing](#testing)
 
-* [Deployment & Local Development](#deployment--local-development)
+* [Deployment](#deployment)
 
 * [Credits](#credits)
   * [Code Used](#code-used)
@@ -87,10 +86,69 @@ The winner message is shown after the game is finished.
 
 
 
-### Technologies used
+## Technologies used
 
- - [Patorjk.com](https://patorjk.com/software/taag/#p=testall&f=3-D&t=TIC%20TAC%20TOE) was used to convert text to ASCII Art to create LOGO and RULES
+### Languages used: 
 
+- [Python](https://www.python.org)
+ 
+### Frameworks, Libraries and Programs Used
+
+- [GitHub](https://github.com/) was used for version control and site deployment.
+- [Gitpod](https://gitpod.io/) is the Integrated Development Environment (IDE) chosen for this project.
+- [Heroku](https://id.heroku.com) was used to deploy the live project.
+- [PEP8](http://pep8online.com/) was used to validate all the Python code.
+- [Patorjk](https://patorjk.com) was used to create the game ASCII text arts.
+- [Colorama](https://pypi.org/project/colorama/) was used to print the colourful text in the terminal.
+- [Lucidchart](https://lucid.app/) was used to create the flowchart.
+ 
+
+## Testing
+
+ 
+## Deployment
+
+This application has been deployed by using the Heroku cloud platform.
+You can find a [template](https://github.com/Code-Institute-Org/python-essentials-template) prepared by Code Institute that is designed to display this application in a modern web browser. This allows the project to be accessible for users without the need of any third party software other than an Internet browser application.
+
+### Local Deployment
+
+Gitpod IDE is the development environment for this project.
+
+Heroku will need the requirements file to deploy the project succesfully.
+
+- To create the project's requirements use: `pip3 freeze > requirements.txt`.
+- Afterwards push latest code to Github.
+
+
+#### Clone this project by following the steps:
+
+1. Navigate to the main page of the repository on GitHub.com.
+2. Click Code above the list of files.
+3. You will be provided with three options to choose from, HTTPS, SSH, or GitHub CLI
+4. Click the clipboard icon in order to copy the URL
+5. Open the terminal
+6. Change the current working directory to the location where you want the cloned directory
+7. Type git clone, and then paste the URL you copied in step 4
+
+### Heroku Deployment
+
+This project uses the services available at [Heroku] (https://www.heroku.com). Heroku is a Platform as a Service (PaaS) that allows users to create, deploy, and control applications in a cloud environment.
+
+1. Select "New" in the top-right corner in the Heroku Dashboard after log-in.
+2. Select the "Create new app" button from the dropdown menu.
+3. Assign a unique name to your application.
+4. Next select your region
+5. Click on the "Create App" button
+6. Navigate to the created application and click on "Settings" Tab.
+7. Click "Reveal Config Vars".
+8. Enter `PORT` into the Key box and `8000` into the Value box and click the Add button.
+9. Next enter `CREDS` into the Key box and credentials (ie. from `creds.json`) into the Value box.
+10. Scroll down to the Buildpack section click Add Buildpack select Python and click "Save Changes".
+11. From the same menu select Node.js and click Save Changes.
+12. Navigate to the "Deploy" tab and select the desired deployment method.
+13. Select "Enable Automatic Deploy" to rebuild your project automatically every time you push a new commit.
+14. Select "Manual Deployment" to manually deploy from your desired branch on will.
 
 
 
