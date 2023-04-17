@@ -145,7 +145,7 @@ def rules():
     while True:
         answer = input(
             Fore.YELLOW +
-            'Do you want to read the RULES? Please, input "y" for YES or "n" for NO:\n '
+            'Do you want to read the RULES? Please, input "y" for YES or "n" for NO: '
              + Fore.RESET)
         if answer.lower() == 'y':
             print(art.RULES)
