@@ -54,6 +54,7 @@ The colours of the game were supplied by the [Colorama](https://pypi.org/project
 
 The flow chart was created using [Lucid](https://lucid.co/).
 
+
 ## Features
 
 ### Logo
@@ -76,14 +77,10 @@ The warning messages are shown when there was an invalid input.
 
 The winner message is shown after the game is finished.
 
-
 ### Future implements
 
 - Take the names of the players
 - Score counter
-
-
-
 
 
 ## Technologies used
@@ -101,8 +98,8 @@ The winner message is shown after the game is finished.
 - [Patorjk](https://patorjk.com) was used to create the game ASCII text arts.
 - [Colorama](https://pypi.org/project/colorama/) was used to print the colourful text in the terminal.
 - [Lucidchart](https://lucid.app/) was used to create the flowchart.
- 
 
+ 
 ## Testing
 
  
@@ -119,7 +116,6 @@ Heroku will need the requirements file to deploy the project succesfully.
 
 - To create the project's requirements use: `pip3 freeze > requirements.txt`.
 - Afterwards push latest code to Github.
-
 
 #### Clone this project by following the steps:
 
@@ -151,9 +147,18 @@ This project uses the services available at [Heroku] (https://www.heroku.com). H
 14. Select "Manual Deployment" to manually deploy from your desired branch on will.
 
 
-
 ## Credits
 
-### Code used
-### Acknowledgments
+- [Medium](https://medium.com/byte-tales/the-classic-tic-tac-toe-game-in-python-3-1427c68b8874) article was used to figure out how to draw the game board in Python. 
+- [While loops](https://www.w3schools.com/python/python_while_loops.asp) w3schools.com article was used to refresh my knowlege about the loops.
+- [Colorama](https://github.com/hameditalha/PythonStringStyle/blob/master/text.py) this tutorial was used to assist work with text colours.
+
+
+## Acknowledgments
+
+- I would like to thank my husband for his support and my daughter for her help with testing the game.
+
+- Also, I would like to thank my Code Institute mentor, Rory Patrick Sheridan for his support and feedback throughout this portfolio project.
+
+
   
