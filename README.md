@@ -52,7 +52,9 @@ The colours of the game were supplied by the [Colorama](https://pypi.org/project
  
 ## Logic
 
-The flow chart was created using [Lucid](https://lucid.co/).
+The flow chart was created using [Lucid](https://lucid.co)
+
+![Flowchart](docs/images/flowchart.png)
 
 
 ## Features
