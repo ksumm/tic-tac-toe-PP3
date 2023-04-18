@@ -11,9 +11,9 @@ colorama.init()
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
-player = "X" # pylint: disable=C0103
-winner = None # pylint: disable=C0103
-game_running = True # pylint: disable=C0103
+player = "X"  # pylint: disable=C0103
+winner = None  # pylint: disable=C0103
+game_running = True  # pylint: disable=C0103
 
 
 # print the game board
@@ -21,12 +21,12 @@ def print_board(g_board):
     """
     Print the board of the game.
     """
-    print(Fore.YELLOW  + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW  + "|", g_board[0], "|", g_board[1], "|", g_board[2], "|" + Fore.RESET)
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW + "|", g_board[3], "|", g_board[4], "|", g_board[5], "|"+ Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[0], "|", g_board[1], "|", g_board[2], "|" + Fore.RESET)
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW + "|", g_board[6], "|", g_board[7], "|", g_board[8], "|"+ Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[3], "|", g_board[4], "|", g_board[5], "|" + Fore.RESET)
+    print(Fore.YELLOW + "-"*13 + Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[6], "|", g_board[7], "|", g_board[8], "|" + Fore.RESET)
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
 
 
@@ -44,13 +44,16 @@ def user_input(board):
             board[inp_num-1] = player
             break
         elif inp_num not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
-            print(Fore.CYAN + "Error input. Enter the number 1-9: "+ Fore.RESET)
+            print(Fore.CYAN
+                  + "Error input. Enter the number 1-9: "
+                  + Fore.RESET)
             continue
         else:
-            print(Fore.CYAN + "This cell is already taken. Enter another number." + Fore.RESET)
+            print(Fore.CYAN
+                  + "This cell is already taken. Enter another number."
+                  + Fore.RESET)
             continue
         print_board(board)
-
 
 
 # check the winner
@@ -106,8 +109,11 @@ def check_draw(board):
     global game_running
     if "-" not in board:
         print_board(board)
-        print("\nIt is a Draw!")
-        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
+        print(Fore.CYAN + Style.BRIGHT
+              + "\nIt is a Draw!" + Fore.RESET)
+        print(Fore.CYAN + Style.BRIGHT
+              + "\nTo start New Game press the Run Program button."
+              + "Nice to see you again!" + Fore.RESET)
         game_running = False
 
 
@@ -119,19 +125,28 @@ def check_winner(board):
     if check_row(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
-        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
+        print(Fore.CYAN + Style.BRIGHT
+              + "\nTo start New Game press the Run Program button."
+              + " Nice to see you again!"
+              + Fore.RESET)
         game_running = False
 
     elif check_column(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
-        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
+        print(Fore.CYAN + Style.BRIGHT
+              + "\nTo start New Game press the Run Program button."
+              + " Nice to see you again!"
+              + Fore.RESET)
         game_running = False
 
     elif check_diagonal(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
-        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
+        print(Fore.CYAN + Style.BRIGHT
+              + "\nTo start New Game press the Run Program button."
+              + " Nice to see you again!"
+              + Fore.RESET)
         game_running = False
 
 
@@ -147,10 +162,10 @@ def rules():
     print(art.LOGO)
     print(Fore.YELLOW + "Welcome to the TIC TAC TOE game!\n" + Fore.RESET)
     while True:
-        answer = input(
-            Fore.YELLOW +
-            'Do you want to read the RULES? Please, input "y" for YES or "n" for NO: '
-             + Fore.RESET)
+        answer = input(Fore.YELLOW
+                       + 'Do you want to read the RULES?'
+                       + 'Please, input "y" for YES or "n" for NO: '
+                       + Fore.RESET)
         if answer.lower() == 'y':
             print(art.RULES)
             break
@@ -177,7 +192,6 @@ def switch_player():
 
     else:
         player = "X"
-
 
 
 # start the game
