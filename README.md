@@ -2,7 +2,9 @@
 
 ### Link to the Live Project: [Tic-Tac-Toe Game](https://tic-tac-toe-pp3-game.herokuapp.com/)
 
-Tic Tac Toe is a traditional game for 2 players. It teaches strategy skills, develops logical thinking, improves the ability to concentrate and focus. It is a simple, fun and easy game which is suitable as for the chealdren, so for the adults or eldery users.  
+Tic Tac Toe is a traditional game for 2 players. It teaches strategy skills, develops logical thinking, improves the ability to concentrate and focus. It is a simple, fun and easy game which is suitable as for the chealdren, so for the adults or eldery users. 
+
+![](docs/images/mockup.png)
 
 ## CONTENTS
 
