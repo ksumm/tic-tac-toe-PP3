@@ -107,6 +107,7 @@ def check_draw(board):
     if "-" not in board:
         print_board(board)
         print("\nIt is a Draw!")
+        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
         game_running = False
 
 
@@ -118,16 +119,19 @@ def check_winner(board):
     if check_row(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
+        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
         game_running = False
 
     elif check_column(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
+        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
         game_running = False
 
     elif check_diagonal(board):
         print_board(board)
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
+        print(Fore.CYAN + Style.BRIGHT + "\nTo start New Game press the Run Program button. Nice to see you again!" + Fore.RESET)
         game_running = False
 
 
