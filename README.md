@@ -65,21 +65,35 @@ The flow chart was created using [Lucid](https://lucid.co)
 
 The Tic Tac Toe logo in magenta color is shown when the user run the game. It is created using the ASCII art.
 
+![](docs/images/logo.png)
+
 ### Rules
 
 After starting the game the user is asked if he wants to read the rules. Rules section is printed in magenta colour and has a logo created using the ASCII art.
 
+![](docs/images/rules.png)
+
 ### Game board
 
-The game has simple 3*3 cells board in bright yellow colour, that gives to the user a positive impression. 
+The game has 3x3 simple game board in yellow colour, that gives positive impression for the user.
+
+![](docs/images/gameboard.png)
 
 ### Warning messages
 
 The warning messages are shown when there was an invalid input.
 
+![](docs/images/warning3.png)
+
+![](docs/images/warning1.png)
+
+![](docs/images/warning2.png)
+
 ### Winner message
 
 The winner message is shown after the game is finished.
+
+![](docs/images/winner.png)
 
 ### Future implements
 
