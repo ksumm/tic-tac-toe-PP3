@@ -26,8 +26,6 @@ Tic Tac Toe is a traditional game for 2 players. It teaches strategy skills, dev
 * [Deployment](#deployment)
 
 * [Credits](#credits)
-  * [Code Used](#code-used)
-  * [Acknowledgments](#acknowledgments)
   
 
 ## User Experience (UX)
@@ -158,7 +156,7 @@ Lighthouse Devtools was used to check the accessibility, performance, and SEO:
 
 No known bugs were detected.
 
-## Deploymentdocs/images/
+## Deployment
 
 This application has been deployed by using the Heroku cloud platform.
 You can find a [template](https://github.com/Code-Institute-Org/python-essentials-template) prepared by Code Institute that is designed to display this application in a modern web browser. This allows the project to be accessible for users without the need of any third party software other than an Internet browser application.
