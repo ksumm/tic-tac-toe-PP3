@@ -170,7 +170,7 @@ def rules():
     print(Fore.YELLOW + "Welcome to the TIC TAC TOE game!\n" + Fore.RESET)
     while True:
         answer = input(Fore.YELLOW
-                       + 'Do you want to read the RULES?'
+                       + 'Do you want to read the RULES? '
                        + 'Please, input "y" for YES or "n" for NO: '
                        + Fore.RESET)
         if answer.lower() == 'y':
