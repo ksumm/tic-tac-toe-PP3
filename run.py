@@ -39,19 +39,26 @@ def user_input(board):
     - if the cell is already occupied
     """
     while True:
-        inp_num = int(input(f"{Fore.MAGENTA}\nEnter a number 1-9: {Fore.RESET}"))    # noqa: E501
-        if inp_num >= 1 and inp_num <= 9 and board[inp_num-1] == "-":
-            board[inp_num-1] = player
-            break
-        elif inp_num not in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
-            print(Fore.CYAN
-                  + "Error input. Enter the number 1-9: "
-                  + Fore.RESET)
-            continue
-        else:
-            print(Fore.CYAN
-                  + "This cell is already taken. Enter another number."
-                  + Fore.RESET)
+        try:
+            inp_num = int(input(f"{Fore.MAGENTA}\nEnter a number 1-9: {Fore.RESET}"))    # noqa: E501
+            if inp_num in range(1, 10):
+                if board[inp_num-1] == "-":
+                    board[inp_num-1] = player
+                    break
+                else:
+                    print(Fore.CYAN
+                          + "\nThis cell is already taken."
+                          + "Enter another number."
+                          + Fore.RESET)
+                continue
+            else:
+                print(Fore.CYAN
+                      + "\nError input. Enter the number 1-9: "
+                      + Fore.RESET)
+        except ValueError:
+            print(Fore.CYAN 
+                  + "\nThis is not a number. Please enter a valid number" 
+                  + Fore.RESET)           
             continue
         print_board(board)
 
@@ -127,7 +134,7 @@ def check_winner(board):
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")   # noqa: E501
         print(Fore.CYAN + Style.BRIGHT
               + "\nTo start New Game press the Run Program button."
-              + " Nice to see you again!"
+              + " Nice to see you again!\n"
               + Fore.RESET)
         exit()
 
@@ -136,7 +143,7 @@ def check_winner(board):
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")   # noqa: E501
         print(Fore.CYAN + Style.BRIGHT
               + "\nTo start New Game press the Run Program button."
-              + " Nice to see you again!"
+              + " Nice to see you again!\n"
               + Fore.RESET)
         exit()
 
@@ -145,7 +152,7 @@ def check_winner(board):
         print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")   # noqa: E501
         print(Fore.CYAN + Style.BRIGHT
               + "\nTo start New Game press the Run Program button."
-              + " Nice to see you again!"
+              + " Nice to see you again!\n"
               + Fore.RESET)
         exit()
 
