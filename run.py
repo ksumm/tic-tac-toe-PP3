@@ -22,11 +22,11 @@ def print_board(g_board):
     Print the board of the game.
     """
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW + "|", g_board[0], "|", g_board[1], "|", g_board[2], "|" + Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[0], "|", g_board[1], "|", g_board[2], "|" + Fore.RESET)   # noqa: E501
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW + "|", g_board[3], "|", g_board[4], "|", g_board[5], "|" + Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[3], "|", g_board[4], "|", g_board[5], "|" + Fore.RESET)    # noqa: E501
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
-    print(Fore.YELLOW + "|", g_board[6], "|", g_board[7], "|", g_board[8], "|" + Fore.RESET)
+    print(Fore.YELLOW + "|", g_board[6], "|", g_board[7], "|", g_board[8], "|" + Fore.RESET)    # noqa: E501
     print(Fore.YELLOW + "-"*13 + Fore.RESET)
 
 
@@ -39,7 +39,7 @@ def user_input(board):
     - if the cell is already occupied
     """
     while True:
-        inp_num = int(input(f"{Fore.MAGENTA}\nEnter a number 1-9:\n {Fore.RESET}"))
+        inp_num = int(input(f"{Fore.MAGENTA}\nEnter a number 1-9: {Fore.RESET}"))    # noqa: E501
         if inp_num >= 1 and inp_num <= 9 and board[inp_num-1] == "-":
             board[inp_num-1] = player
             break
@@ -124,30 +124,30 @@ def check_winner(board):
     global game_running
     if check_row(board):
         print_board(board)
-        print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
+        print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")   # noqa: E501
         print(Fore.CYAN + Style.BRIGHT
               + "\nTo start New Game press the Run Program button."
               + " Nice to see you again!"
               + Fore.RESET)
-        game_running = False
+        exit()
 
     elif check_column(board):
         print_board(board)
-        print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
+        print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")   # noqa: E501
         print(Fore.CYAN + Style.BRIGHT
               + "\nTo start New Game press the Run Program button."
               + " Nice to see you again!"
               + Fore.RESET)
-        game_running = False
+        exit()
 
     elif check_diagonal(board):
         print_board(board)
-        print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")
+        print(f"{Fore.CYAN}{Style.BRIGHT}\nThe winner is {winner}!{Fore.RESET}")   # noqa: E501
         print(Fore.CYAN + Style.BRIGHT
               + "\nTo start New Game press the Run Program button."
               + " Nice to see you again!"
               + Fore.RESET)
-        game_running = False
+        exit()
 
 
 def rules():
@@ -168,12 +168,12 @@ def rules():
                        + Fore.RESET)
         if answer.lower() == 'y':
             print(art.RULES)
-            break
             game_running = True
+            break
         elif answer.lower() == 'n':
             print(Fore.MAGENTA + "\nLet's start to play!\n" + Fore.RESET)
-            break
             game_running = True
+            break
         else:
             print(Fore.CYAN + "\nThe wrong answer. Try again?\n" + Fore.RESET)
             continue
@@ -189,9 +189,10 @@ def switch_player():
     global player
     if player == "X":
         player = "O"
-
+        print(Fore.GREEN + "\nPlayer 2 - your turn!\n" + Fore.RESET)
     else:
         player = "X"
+        print(Fore.GREEN + "\nPlayer 1 - your turn!\n" + Fore.RESET)
 
 
 # start the game
