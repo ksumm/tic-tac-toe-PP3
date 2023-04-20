@@ -69,7 +69,7 @@ The Tic Tac Toe logo in magenta color is shown when the user run the game. It is
 
 ### Rules
 
-After starting the game the user is asked if he wants to read the rules. Rules section is printed in magenta colour and has a logo created using the ASCII art.
+After starting the game, the user is asked if he wants to read the rules. Rules section is printed in magenta colour and has a logo created using the ASCII art.
 
 ![](docs/images/rules.png)
 
@@ -140,7 +140,7 @@ The winner message is shown after the game is finished.
 
 ### Pyton Linter
 
-No errors were found when passing through [CI Python Linter](https://pep8ci.herokuapp.com/). However, some warnings regarding whitespace and invalid escape have shown on the result between lines 53-70. They don't affect the functionality of this program, they are actually necessary to make the logo display correctly.
+No errors were found when passing through [CI Python Linter](https://pep8ci.herokuapp.com/). However, some warnings regarding whitespace and invalid escape have shown on the result between lines 53-70. They don't affect the functionality of this program, and they are actually necessary to make the logo display correctly.
 
 ![CI Python Linter](docs/images/pylinter.png)
 
@@ -156,7 +156,7 @@ Lighthouse Devtools was used to check the accessibility, performance, and SEO:
 
 ### Known Bugs
 
-
+No known bugs were detected.
 
 ## Deploymentdocs/images/
 
