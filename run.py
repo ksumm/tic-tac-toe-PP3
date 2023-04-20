@@ -119,9 +119,9 @@ def check_draw(board):
         print(Fore.CYAN + Style.BRIGHT
               + "\nIt is a Draw!" + Fore.RESET)
         print(Fore.CYAN + Style.BRIGHT
-              + "\nTo start New Game press the Run Program button."
-              + "Nice to see you again!" + Fore.RESET)
-        game_running = False
+              + "\nTo start New Game press the Run Program button. "
+              + "Nice to see you again!\n" + Fore.RESET)
+        exit()
 
 
 def check_winner(board):
