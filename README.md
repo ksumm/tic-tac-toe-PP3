@@ -120,8 +120,45 @@ The winner message is shown after the game is finished.
  
 ## Testing
 
- 
-## Deployment
+## Functional testing
+
+| Test                                                                                           | Completed successfully |
+| :--------------------------------------------------------------------------------------------- | :--------------------: |
+| The game LOGO displayed                                                                        |          Yes           |
+| The user is asked if they want to read the RULES                                               |          Yes           |
+| If user want to read the Rules after entering the "y" symbol the RULES displayed               |          Yes           |
+| If user input incorrect symbol the warning message is shown                                    |          Yes           |
+| If user asked about reading the Rules and after entering the "n" the game is started           |          Yes           |
+| The first player is generated                                                                  |          Yes           |
+| The game board is generated                                                                    |          Yes           |
+| Players can enter their moves in alternation                                                   |          Yes           |
+| If a field is already occupied, the user will be asked again to enter a move.                  |          Yes           |
+| Once a player has won, it is recognized and the game is over.                                  |          Yes           |
+
+
+## Validator testing
+
+### Pyton Linter
+
+No errors were found when passing through [CI Python Linter](https://pep8ci.herokuapp.com/). However, some warnings regarding whitespace and invalid escape have shown on the result between lines 53-70. They don't affect the functionality of this program, they are actually necessary to make the logo display correctly.
+
+![CI Python Linter](docs/images/pylinter.png)
+
+### Jigsaw Validator
+
+No errors were found when passing through [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftic-tac-toe-pp3-game.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+### Lighthouse
+
+Lighthouse Devtools was used to check the accessibility, performance, and SEO:
+
+![](docs/images/lighthouse.png)
+
+### Known Bugs
+
+
+
+## Deploymentdocs/images/
 
 This application has been deployed by using the Heroku cloud platform.
 You can find a [template](https://github.com/Code-Institute-Org/python-essentials-template) prepared by Code Institute that is designed to display this application in a modern web browser. This allows the project to be accessible for users without the need of any third party software other than an Internet browser application.
