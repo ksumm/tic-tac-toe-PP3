@@ -40,7 +40,7 @@ def user_input(board):
     """
     while True:
         try:
-            inp_num = int(input(f"{Fore.MAGENTA}\nEnter a number 1-9: {Fore.RESET}"))    # noqa: E501
+            inp_num = int(input(f"{Fore.MAGENTA}{Style.BRIGHT}\nEnter a number 1-9: {Fore.RESET}"))    # noqa: E501
             if inp_num in range(1, 10):
                 if board[inp_num-1] == "-":
                     board[inp_num-1] = player
@@ -56,9 +56,9 @@ def user_input(board):
                       + "\nError input. Enter the number 1-9: "
                       + Fore.RESET)
         except ValueError:
-            print(Fore.CYAN 
-                  + "\nThis is not a number. Please enter a valid number" 
-                  + Fore.RESET)           
+            print(Fore.CYAN
+                  + "\nThis is not a number. Please enter a valid number"
+                  + Fore.RESET)
             continue
         print_board(board)
 

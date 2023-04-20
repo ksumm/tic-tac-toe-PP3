@@ -1,11 +1,11 @@
 """import colorama"""
 import colorama
-from colorama import Fore
+from colorama import Fore, Style
 colorama.init()
 
 # ASCII Game Logo Art
 
-LOGO = (Fore.MAGENTA + """
+LOGO = (Fore.MAGENTA + Style.BRIGHT + """
   ___  _  __   ___  _   __   ___ _  ___
 |_ _|| |/ _| |_ _|/ \ / _| |_ _/ \| __|
  | | | ( (_   | || o ( (_   | ( o ) _|
@@ -13,7 +13,7 @@ LOGO = (Fore.MAGENTA + """
 
 """ + Fore.RESET)
 
-RULES = (Fore.MAGENTA + """
+RULES = (Fore.MAGENTA + Style.BRIGHT + """
 .-.-. .-.-. .-.-. .-.-. .-.-.
 '. R )'. U )'. L )'. E )'. S )
   ).'   ).'   ).'   ).'   ).'
